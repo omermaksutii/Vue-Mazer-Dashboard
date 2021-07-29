@@ -1,10 +1,10 @@
 ### Introduction
 
-This is [Soft UI Dashboard](https://github.com/creativetimofficial/soft-ui-dashboard) in Vue Js.
+This is [Mazer Dashboard](https://github.com/zuramai/mazer) in Vue Js.
 
 The project is helpful to start your next project, as it provides a lot of the common tools you may reach for, all ready to go.
 
-![preview.png](preview.jpeg)
+![preview.png](screenshot.png)
 
 ### Features
 
@@ -14,7 +14,7 @@ The project is helpful to start your next project, as it provides a lot of the c
 - Modules/Components organized across folders.
 - Base pages (like Dashboard/404 etc).
 - Pre-configured with code quality tools: Prettier, Jest, etc.
-- [Soft UI](https://github.com/creativetimofficial/soft-ui-dashboard) included.
+- [Mazer UI](https://github.com/zuramai/mazer) included.
 - Axios Interceptors.
 - [Notifcations](https://github.com/dafcoe/vue-notification).
 
