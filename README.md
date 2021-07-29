@@ -25,3 +25,6 @@ npm install
 cp .env.example .env
 npm run dev
 ```
+### Demo
+
+This is [DEMO](https://vue-mazer-dashboard.netlify.app/admin/dashboard) in Vue Js.
