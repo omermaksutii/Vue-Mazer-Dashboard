@@ -1,5 +1,6 @@
 import 'bootstrap/dist/js/bootstrap.min.js'
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import sidenavComponent from '@/components/Sidenav'
 import navbarComponent from '@/components/Navbar'
 

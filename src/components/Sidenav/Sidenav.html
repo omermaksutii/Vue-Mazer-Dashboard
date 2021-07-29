@@ -1,95 +1,359 @@
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-left ms-3"
-    id="sidenav-main">
-    <div class="sidenav-header">
-        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute right-0 top-0 d-none d-xl-none"
-            aria-hidden="true" id="iconSidenav"></i>
-        <a class="navbar-brand m-0 text-center" href="#">
-            <span class="ms-1 font-weight-bold">{{ appName }}</span>
-        </a>
-    </div>
-    <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto" id="sidenav-collapse-main">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'admin.dashboard' }">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Dashboard</span>
-                </router-link>
-            </li>
-            <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'admin.users' }">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Users</span>
-                </router-link>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Menu Example</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Menu Example</span>
-                </a>
-            </li>
-            <li class="nav-item mt-3">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Menu Example</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Menu Example</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Menu Example</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="sidenav-footer mx-3 mt-3 pt-3">
-        <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
-            <div class="full-background"
-                :style="{ backgroundImage: 'url(\'' + require('@/assets/images/white-curved.jpeg') + '\')' }"></div>
-            <div class="card-body text-left p-3 w-100">
-                <div
-                    class="icon icon-shape icon-sm bg-white shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
-                    <i class="fas fa-gem" style="font-size: 18px;color: black;"></i>
+<div id="sidebar" class="active">
+    <div class="sidebar-wrapper active ps ps--active-y">
+        <div class="sidebar-header">
+            <div class="d-flex justify-content-between">
+                <div class="logo">
+                    <a href="index.html"><img src="@/assets/images/vue-logo.png" alt="Logo" srcset=""></a>
                 </div>
-                <h6 class="text-white up mb-3">Need help?</h6>
-                <a href="#" target="_blank" class="btn btn-white btn-sm w-100 mb-0">Text</a>
+                <div class="toggler">
+                    <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-</aside>
+        <div class="sidebar-menu">
+            <ul class="menu">
+                <li class="sidebar-title">Menu</li>
+
+                <li class="sidebar-item active ">
+                    <a href="index.html" class="sidebar-link">
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-stack"></i>
+                        <span>Components</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="component-alert.html">Alert</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-badge.html">Badge</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-breadcrumb.html">Breadcrumb</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-button.html">Button</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-card.html">Card</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-carousel.html">Carousel</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-dropdown.html">Dropdown</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-list-group.html">List Group</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-modal.html">Modal</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-navs.html">Navs</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-pagination.html">Pagination</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-progress.html">Progress</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-spinner.html">Spinner</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="component-tooltip.html">Tooltip</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-collection-fill"></i>
+                        <span>Extra Components</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="extra-component-avatar.html">Avatar</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="extra-component-sweetalert.html">Sweet Alert</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="extra-component-toastify.html">Toastify</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="extra-component-rating.html">Rating</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="extra-component-divider.html">Divider</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Layouts</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="layout-default.html">Default Layout</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="layout-vertical-1-column.html">1 Column</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="layout-vertical-navbar.html">Vertical with Navbar</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="layout-horizontal.html">Horizontal Menu</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-title">Forms &amp; Tables</li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-hexagon-fill"></i>
+                        <span>Form Elements</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="form-element-input.html">Input</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="form-element-input-group.html">Input Group</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="form-element-select.html">Select</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="form-element-radio.html">Radio</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="form-element-checkbox.html">Checkbox</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="form-element-textarea.html">Textarea</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="form-layout.html" class="sidebar-link">
+                        <i class="bi bi-file-earmark-medical-fill"></i>
+                        <span>Form Layout</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-pen-fill"></i>
+                        <span>Form Editor</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="form-editor-quill.html">Quill</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="form-editor-ckeditor.html">CKEditor</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="form-editor-summernote.html">Summernote</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="form-editor-tinymce.html">TinyMCE</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="table.html" class="sidebar-link">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Table</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="table-datatable.html" class="sidebar-link">
+                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                        <span>Datatable</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-title">Extra UI</li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-pentagon-fill"></i>
+                        <span>Widgets</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="ui-widgets-chatbox.html">Chatbox</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="ui-widgets-pricing.html">Pricing</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="ui-widgets-todolist.html">To-do List</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-egg-fill"></i>
+                        <span>Icons</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="ui-icons-bootstrap-icons.html">Bootstrap Icons </a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="ui-icons-fontawesome.html">Fontawesome</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="ui-icons-dripicons.html">Dripicons</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="ui-chart-chartjs.html">ChartJS</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="ui-chart-apexcharts.html">Apexcharts</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="ui-file-uploader.html" class="sidebar-link">
+                        <i class="bi bi-cloud-arrow-up-fill"></i>
+                        <span>File Uploader</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-map-fill"></i>
+                        <span>Maps</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="ui-map-google-map.html">Google Map</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="ui-map-jsvectormap.html">JS Vector Map</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-title">Pages</li>
+
+                <li class="sidebar-item  ">
+                    <a href="application-email.html" class="sidebar-link">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>Email Application</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="application-chat.html" class="sidebar-link">
+                        <i class="bi bi-chat-dots-fill"></i>
+                        <span>Chat Application</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="application-gallery.html" class="sidebar-link">
+                        <i class="bi bi-image-fill"></i>
+                        <span>Photo Gallery</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="application-checkout.html" class="sidebar-link">
+                        <i class="bi bi-basket-fill"></i>
+                        <span>Checkout Page</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-person-badge-fill"></i>
+                        <span>Authentication</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="auth-login.html">Login</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="auth-register.html">Register</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="auth-forgot-password.html">Forgot Password</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-x-octagon-fill"></i>
+                        <span>Errors</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="error-403.html">403</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="error-404.html">404</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="error-500.html">500</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-title">Raise Support</li>
+
+                <li class="sidebar-item  ">
+                    <a href="https://zuramai.github.io/mazer/docs" class="sidebar-link">
+                        <i class="bi bi-life-preserver"></i>
+                        <span>Documentation</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class="sidebar-link">
+                        <i class="bi bi-puzzle"></i>
+                        <span>Contribute</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="https://github.com/zuramai/mazer#donate" class="sidebar-link">
+                        <i class="bi bi-cash"></i>
+                        <span>Donate</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 969px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 568px;"></div></div></div>
+</div>
