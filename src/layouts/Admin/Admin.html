@@ -1,22 +1,26 @@
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
 <sidenav-component />
 
 <div id="main">
-    <header class="mb-3">
-        <a href="#" class="burger-btn d-block d-xl-none">
-            <i class="bi bi-justify fs-3"></i>
-        </a>
-    </header>
-    <slot />
-    <footer>
-        <div class="footer clearfix mb-0 text-muted">
-            <div class="float-start">
-                <p>{{ (new Date().getFullYear()) }} © Mazer</p>
-            </div>
-            <div class="float-end">
-                <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="http://ahmadsaugi.com">A. Saugi</a></p>
-            </div>
-        </div>
-    </footer>
-    
+  <header class="mb-3">
+    <a href="#" class="burger-btn d-block d-xl-none">
+      <i class="bi bi-justify fs-3"></i>
+    </a>
+  </header>
+  <slot />
+  <footer>
+    <div class="footer clearfix mb-0 text-muted">
+      <div class="float-start">
+        <p>{{ (new Date().getFullYear()) }} © Mazer</p>
+      </div>
+      <div class="float-end">
+        <p>
+          Crafted with
+          <span class="text-danger"><i class="bi bi-heart"></i></span> by
+          <a href="http://ahmadsaugi.com">A. Saugi</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
