@@ -28,3 +28,4 @@ npm run dev
 ### Demo
 
 This is [DEMO](https://vue-mazer-dashboard.netlify.app/admin/dashboard)
+# mobile
